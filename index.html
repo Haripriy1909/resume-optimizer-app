@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta
+      main-heading="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Resume ATS Scorer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-bar">
+      <div class="main-heading">
+        <i
+          class="fas fa-file-alt"
+          style="color: #0d6efd; margin-right: 12px"
+        ></i
+        >smartResume Pros
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#" onclick="showSection('section-home')">Home</a></li>
+        <li><a href="#" onclick="showSection('section-about')">About</a></li>
+        <li>
+          <a href="#" onclick="showSection('section-contact')">Contact</a>
+        </li>
+      </ul>
+    </header>
+
+    <main id="section-home" class="section-container">
+      <h1>Resume ATS Analyzer</h1>
+      <p>
+        <strong>Want to beat the bots?</strong> Paste your resume and choose
+        your target development category.
+      </p>
+      <label for="category">Choose your tech category:</label><br />
+      <select id="category-select">
+        <option>Select Your Tech Role:-</option>
+        <option value="frontend">Frontend Development</option>
+        <option value="backend">Backend Development</option>
+        <option value="fullstack">Fullstack Development</option>
+        <option value="software">Software Engineering</option>
+      </select>
+
+      <textarea id="input" placeholder="Paste your resume here..."></textarea>
+      <button id="submit" onclick="Evaluateresume()">Evaluate Resume</button>
+    </main>
+    <center><div id="result" style="display: none"></div></center>
+
+    <section id="section-about" class="section-container hidden-section">
+      <h2>What Is a Resume ATS Analyzer?</h2>
+      <div class="info-content">
+        <p>
+          This resume analyzer instantly evaluates your resume against your
+          chosen tech category, empowering you with actionable insights to
+          optimize your profile and increase your chances of passing automated
+          hiring filters in real time.
+        </p>
+        <p>This tool helps you:</p>
+        <ul>
+          <li>Match your resume to the right tech role</li>
+          <li>
+            Ensure you include the right Languages and skills relevant to the
+            role
+          </li>
+          <li>Improve formatting and structure for ATS compatibility</li>
+          <li>
+            Receive a score based on how well your resume aligns with the
+            selected job category
+          </li>
+        </ul>
+        <p>
+          <em>Tip:</em> In the real world, customize your resume Languages to
+          match the exact job description — many ATS systems rank resumes based
+          on keyword relevance and formatting.
+        </p>
+      </div>
+    </section>
+
+    <section id="section-contact" class="section-container hidden-section">
+      <h2>Contact</h2>
+      <p>
+        Questions or feedback? Email us at
+        <a href="mailto:support@example.com">support@example.com</a>.
+      </p>
+    </section>
+    <div
+      id="loader"
+      style="display: none; text-align: center; margin-top: 30px"
+    >
+      <i
+        class="fas fa-spinner fa-spin"
+        style="font-size: 2rem; color: #0d6efd"
+      ></i>
+      <p>Analyzing your resume...</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
